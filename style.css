@@ -13,20 +13,27 @@
     box-sizing: 0;
 }
 
+
+
 body{
+    overflow-x: hidden;
     font-family: "poppins";
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('./img/Venom.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    
     background-color: #000000;
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     position: relative;
+   
+    
 }
 
 /* nav/header styling */
 
 header{
+   
     z-index: 9;
     display: flex;
     justify-content: space-between;
@@ -36,6 +43,7 @@ header{
 
 .logo h1{
     color: rgba(182, 51, 51, 0.815);
+    cursor: pointer;
 }
 
 .nav-menu{
@@ -48,18 +56,22 @@ header{
     align-items: center;
     gap: 20px;
     color: var(--txt-clr-white);
+    cursor: pointer;
 }
 
 .menu-icon{
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
+    
 }
 
 /* end nav/header styling */
 
 /* start hero styling */
 .hero{
+ 
     height: 80vh;
     display: flex;
     align-items: center;
@@ -127,4 +139,81 @@ header{
 
 .hero-btn .see-more:hover{
     opacity: 0.6;
+}
+
+
+/* slider movie styling */
+
+.title{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    color: var(--txt-clr-white);
+}
+
+.title2{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: var(--txt-clr-white);
+}
+
+.slide img{
+    object-fit: cover;
+    max-width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+.slide img:hover{
+    opacity: 0.5;
+}
+.swiper {
+  max-width: 1200px;
+  height: 300px;
+   
+}
+/* footer */
+.footer{
+    width: 1100px;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--txt-clr-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .txt{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 1000px){
+    body{
+        max-width: 100%;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 900px){
+    .dlApp span p{
+        display: none;
+    }
+    .footer{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: start;
+      width: 100%;
+    }
+
 }
